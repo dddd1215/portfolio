@@ -1,0 +1,1957 @@
+@charset "UTF-8";
+*{margin: 0;padding: 0; box-sizing: border-box;}
+
+body{
+    background: linear-gradient(319deg, #000 0%, #2f2f2f 100%);
+    overflow-x: hidden;
+}
+.contactbody{
+    position: relative;
+    width: 100%;
+    height: 35%;
+    z-index: -1;
+}
+
+.text{
+    position: fixed;
+    z-index: 100;
+}
+
+/* =================================menu=============================== */
+#menu{
+    position: fixed;
+    right: 50px;top: 107px;
+    z-index: 100;
+}
+.menu{
+    width: 133px;
+    height: 188px;
+    background-color: rgba(0, 0, 0, 0.26);
+    overflow: hidden;
+}
+.menu ul{padding-top: 19px;}
+.menu ul li{
+    text-align: left;
+    padding-left: 10px;
+}
+.menu ul li a{
+    color: #ffffff9d;
+    font-size: 20px;
+    line-height: 35px;
+    transition: 0.3s;
+}
+.menu ul li a:hover{
+    color: #fff;
+    font-size: 25px;
+}
+/* ===============================//menu=============================== */
+
+
+
+
+
+/* ==================================intro============================== */
+
+
+#part-1{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#intro{
+    width: 100%;
+    height: 100%;
+}
+.intro{
+    width: 100%;
+    height: 100%;
+}
+.portfoliotitle{
+    position: absolute;
+    bottom: 40%;right: 10%;
+}
+.portfoliotitle span{
+    color: #fff;
+    float: left;
+    font-family: 'Tektur', cursive; 
+    font-size: 246px;
+    font-weight: 500;
+    text-shadow: -14px 22px 0 #000;
+}
+
+.field span:first-child{
+    position: absolute;
+    top: 3%; left: 3%;
+    color: #878787;
+    font-family: 'Tektur', cursive;
+    font-size: 65px;
+    text-shadow: 8px -8px 0 #000; 
+}
+.field span:last-child{
+    position: absolute;
+    top: 11%; left: 3%;
+    color: #878787;
+    font-family: 'Tektur', cursive;
+    font-size: 65px;
+    text-shadow: 8px -8px 0 #000; 
+}
+
+/* 메뉴 라인  ------------------------------------------*/
+.intro-menu-line{
+    position: absolute;
+    content: "";
+    top: 50%;right: 10%;
+    width: 3px;
+    height: 500vh;
+    background-color: #fff;
+    transform-origin: top center;
+}
+
+/* 인트로 바닥 라인  ------------------------------------------*/
+.line-left{
+    position: absolute;
+    transform:scaleY(1) rotateY(135deg);
+    bottom: 0;left: 0;
+    perspective-origin: -18px 0px;
+    perspective:5px;
+    transform-origin: bottom;
+    animation: introlineleft 0.5s forwards;
+    animation-delay: 0.6s;
+}
+.transform{
+    position:relative;
+    width:57.9vw; height:105px;
+    background: #fff;
+    transform: rotateX(70deg);
+}   
+.line-right{
+    position: absolute;
+    bottom: 0;right: -168px;
+    perspective-origin: -18px 0px;
+    perspective:5px;
+    transform-origin: bottom;
+    animation: introline 0.5s forwards;
+    animation-delay: 0.6s;
+}
+
+@keyframes introline{
+    0%{transform: scaleY(1);}
+    100%{transform: scaleY(0);}
+}
+@keyframes introlineleft{
+    0%{transform: scaleY(1) rotateY(135deg);}
+    100%{transform: scaleY(0) rotateY(135deg);}
+}
+
+/* 스크롤 표시  ------------------------------------------*/
+.intro-scroll{
+    color: #fff;
+    position: absolute;
+    bottom: 13%;left: 50%;
+    transform: translate(-50%,0);
+    text-align: center;
+    animation: introscroll 3s infinite ;
+}
+
+.intro-scroll p{
+    font-size: 20px;
+    line-height: 10px;
+}
+@keyframes introscroll{
+    0%{transform: translate(-50%,0);
+        opacity: 1;}
+    25%{transform: translate(-50%,-20px);
+        opacity: 0;}
+    50%{transform: translate(-50%,0);
+        opacity: 1;}
+    75%{transform: translate(-50%,-20px);
+        opacity: 0;}
+    100%{transform: translate(-50%,0);
+        opacity: 1;}
+}
+/* ================================//intro============================== */
+
+/* ================================profile=======================================*/
+#profile{
+    position: relative;
+    height: 1080px;
+}
+.profile-line{
+    position: absolute;
+    right: -25px;
+    transform-origin: top;
+    width: 28px;
+
+    background-color: #fff;
+}
+.line-1{
+    top: 60%;
+    height: 2591px;
+    transform: rotate(42.6deg) scaleY(1);
+}
+.line-2{
+    top: 68%;
+    height: 2428px;
+    transform: rotate(42.6deg) scaleY(1);
+}
+
+
+.hover-circle{
+    position: absolute;
+    left: 148px; top: 138px;
+    width: 164px; height: 164px;
+    background-color: #fff;
+    box-shadow: 0 4px 4px rgba(0,0,0,25%);
+    border-radius: 50%;
+    text-align: center;
+    z-index: 6;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.hover-circle h3{
+    line-height: 164px;
+    font-size: 25px;
+    font-weight: 300;
+    transition: 0.3s;
+}
+.hover-circle:hover{background-color: #222;}
+.hover-circle:hover h3{
+    font-size: 30px;
+    color: #fff;
+}
+
+/* 원 텍스트  ------------------------------------------*/
+.circletext{
+    position: absolute;
+    top: 75px; left: 84px;
+    z-index: 5;
+    animation: circle 8s infinite linear;
+    mix-blend-mode: difference;
+}
+@keyframes circle{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(-360deg);}
+}
+
+/* 프로필 이미지  ------------------------------------------*/
+.profile-img1{
+    position: absolute;
+    left: 198px; top: 148px;
+    background-color: #A7B5BA;
+    width: 580px;
+    height: 670px;
+    transform: translateY(100%) rotateY(180deg);
+    transition: 0.8s cubic-bezier(0, 0.46, 0.22, 1.02);
+    
+}
+.profile-img2{
+    position: absolute;
+    left: 230px; top: 214px;
+    background-color: #fff;
+    background: url(../img/이미지1컬러.png) -60px 0;
+    background-size: 1200px;
+    filter: brightness(0.50);
+    width: 580px; height: 670px;
+    transform: translateY(100%);
+    transition: 0.8s cubic-bezier(0, 0.46, 0.22, 1.02);
+    transition-delay: 0.3s;
+}
+.profile-img2:hover{
+    filter: none;
+    background-size: 1250px;
+}
+
+.profile.active .profile-img1{
+    transform: translateY(0) rotate(0);
+}
+.profile.active .profile-img2{
+    transform: translateY(0);
+}
+
+/* 프로필 라인  ------------------------------------------*/
+.profile .profile-Content-Line::after{
+    content: "";
+    position: absolute; 
+    top: 350px;left: 47%;
+    width: 8px;height: 343px;
+    background-color: #fff;
+    transform-origin: top;
+    transform: translateY(-20%) scaleY(0);
+    transition: 0.3s 0.5s cubic-bezier(0, 0.46, 0.22, 1.02);
+}
+.profile.active .profile-Content-Line::after{
+    transform: translateY(0) scaleY(1);
+}
+
+/* 프로필 내용  ------------------------------------------*/
+.profile .profile_content{
+    position: absolute;
+    left: 48%; top: 328px;
+    color: #fff;
+    font-size: 30px;
+    line-height: 77px;    
+}
+.profile .profile-con li{
+    position: relative;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.4s 0.6s;
+}
+
+
+.profile .profile-con .Birthsday{
+    transition-delay: 0.7s;
+}
+.profile .profile-con .Residence{
+    transition-delay: 0.8s;
+}
+.profile .profile-con .Email{
+    transition-delay: 0.9s;
+}
+.profile .profile-con .Tel{
+    transition-delay: 1s;
+}
+
+.profile.active .profile-con .name{
+    transform: scaleX(1);
+}
+.profile.active .profile-con .Birthsday{
+    transform: scaleX(1);
+}
+.profile.active .profile-con .Residence{
+    transform: scaleX(1);
+}
+.profile.active .profile-con .Email{
+    transform: scaleX(1);
+}
+.profile.active .profile-con .Tel{
+    transform: scaleX(1);
+}
+
+/* ================================//profile=======================================*/
+
+/* ================================history=======================================*/
+
+.history{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+.history-content{
+    position: absolute;
+    left: 89px; top: 108px;
+}
+
+/* 날짜 타이핑 ------------------------------------------*/
+
+.history .typing-demo {
+    color: #fff;
+    width: 9ch;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;    
+    font-family: monospace;
+    font-size: 2em;
+    opacity: 0;
+}
+
+.history.active .typing-demo.typing1{
+    animation-delay: 0;
+}
+.history.active .typing-demo.typing2{
+    animation-delay: 1s;
+}
+.history.active .typing-demo.typing3{
+    animation-delay: 2s;
+}
+
+
+.history.active .typing-demo{
+    animation: typing 0.5s steps(8) forwards, blink .5s step-end  alternate;
+}
+  @keyframes typing {
+    from {
+      width: 0
+    }
+    1%{opacity: 1;}
+    100%{opacity: 1;}
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+
+
+
+/* 활동 내역  ------------------------------------------*/
+.history-content h3{
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 100px;
+    opacity: 0;
+}
+.history-con1 h3{
+    transition-delay: 1.3s; 
+}
+.history-con2 h3{
+    transition-delay: 1.7s;
+}
+.history-con3 h3{
+    transition-delay: 2s;
+}
+
+.history.active .history-con1 h3,
+.history.active .history-con2 h3,
+.history.active .history-con3 h3
+{
+    opacity: 1;
+}
+
+
+
+/* history 글자 라인 부분  ------------------------------------------*/
+.history-content .line{
+    position: absolute;
+    left: 0;
+    height: 34px;
+    background-color: #fff;
+    transform: scaleX(0);
+}
+.history-con1 .line{
+    top: 16%;
+    width: 100%;
+}
+.history-con2 .line{
+    top: 49%;
+    width: 88%;
+}
+.history-con3 .line{
+    top: 82%;
+    width: 65%;
+}
+
+
+.history.active .history-content .line{
+    animation: historyline 2s forwards;
+}
+.history.active .history-con1 .line{
+    animation-delay: 0.3s;
+}
+.history.active .history-con2 .line{
+    animation-delay: 0.7s;
+}
+.history.active .history-con3 .line{
+    animation-delay: 1s;
+}
+
+@keyframes historyline{
+    0%{
+        transform-origin: left;
+        transform: scaleX(0);
+    }
+    50%{
+        transform-origin: left;
+        transform: scaleX(1);
+    }
+    51%{
+        transform-origin: right;
+        transform: scaleX(1);
+    }
+    100%{
+        transform-origin: right;
+        transform: scaleX(0);
+    }
+}
+
+/* history 이미지 */
+.history-img{
+    position: absolute;
+    right: 450px; top: 200px;
+    width: 520px; height: 750px;
+    background: url(../img/이미지2.jpg)center;
+    background-size: 700px;
+    transform: translateY(100%) rotateY(180deg);
+    transition: 0.8s 1s cubic-bezier(0, 0.46, 0.22, 1.02);
+}
+.history.active .history-img{
+    transform: translateY(0) rotate(0);
+}
+.historytitle{
+    position: absolute;
+    left: 89px; bottom: 18%;
+}
+.historytitle span{
+    color: #fff;
+    float: left;
+    font-family: 'Tektur', cursive; 
+    font-size: 150px;
+    font-weight: 500;
+}
+
+
+/* ================================//history=======================================*/
+
+/* ================================skill=======================================*/
+.skill{
+    position: relative;
+    width: 100vw;height: 100vh;
+    color: #fff;
+}
+.skilltitle{
+    position: absolute;
+    right: 45%;top: 5%;
+}
+.skilltitle span{
+    color: #fff;
+    float: left;
+    font-family: 'Tektur', cursive; 
+    font-size: 150px;
+    font-weight: 500;
+}
+.skill.active .chart,
+.skill.active .chart2
+{
+    position: relative;
+    animation: skillcircle 2s;
+}
+
+@keyframes skillcircle{
+    0%{transform: rotate(360deg);}
+    100%{transform: rotate(0deg);}
+}
+
+.desing{
+    display: none;
+}
+
+/* skill circle */
+
+.easypiechart .container{
+    width: 1200px; position: absolute;
+    left: 54%; top: 45%;
+    transform: translate(-50%,-50%);
+    display: flex;
+}
+.easypiechart .con2{
+    top: 70%; left: 60%;
+}
+.easypiechart .container .box{ 
+    position: relative;
+    width: 20%; height: 199px;}
+
+.easypiechart .container .box .chart{
+    text-align: center;
+}
+.easypiechart .container .box h2{text-align: center;
+font-size: 25px; color: #fff;
+}
+.easypiechart .container .box h3{
+    position: absolute;
+    left: 50%; top: 34%;
+    color: #fff;
+    transform: translateX(-50%);
+    font-size: 40px;
+    text-align: center;
+    width: 100%;
+}
+
+
+.easypiechart .con3{
+    top: 50%; left: 50%;
+}
+.easypiechart .con3 .box{
+    width: 37%;
+}
+.easypiechart .con3 .box .chart2{
+    text-align: center;
+}
+.easypiechart .con3 .box h3{
+    top: 45%;font-size: 60px;
+}
+.easypiechart .con3 .box h2{
+    text-align: center;
+    font-size: 25px; color: #fff;
+}
+/* //skill circle */
+
+
+/* skillbtn -----------------------------*/
+.skillbtn{
+    position: absolute;
+    left: 10%;bottom: 20%;
+    z-index: 1;
+}
+.skillbtn h2{
+    font-weight: 300;
+}
+.skillbtn i{
+    font-size: 30px;
+    line-height: auto;
+}
+/* //skillbtn ------------------------------------------*/
+
+/* codebtn ---------*/
+.codebtn h2{
+    font-size: 55px;
+    padding: 10px;
+    color: #878787;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+.codebtn::after{
+    content: "";
+    position: absolute;
+    top: 40%;
+    width: 100%; height: 1px;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: 0.3s;
+    background-color: #fff;
+}
+
+/* hover --------------*/
+
+.codebtn:hover h2{
+    color: #fff;
+    cursor: pointer;
+    font-size: 65px;
+}
+.codebtn:hover::after{
+    transform: scaleX(1);
+}
+
+/* style --------------*/
+.codebtn.style h2{
+    color: #fff;
+    cursor: pointer;
+    font-size: 65px;
+}
+.codebtn.style::after{
+    transform: scaleX(1);
+}
+/* //codebtn --------------------------------------------*/
+
+
+/* designbtn */
+
+.designbtn h2{
+    font-size: 55px;
+    padding: 10px;
+    color: #878787;
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+.designbtn:hover h2{
+    color: #fff;
+    cursor: pointer;
+    font-size: 65px;
+}
+
+.designbtn::after{
+    content: "";
+    position: absolute;
+    bottom: 15%;
+    width: 100%; height: 1px;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: 0.3s;
+    background-color: #fff;
+}
+
+.designbtn:hover::after{
+    transform: scaleX(1);
+}
+
+.designbtn.style h2{
+    color: #fff;
+    cursor: pointer;
+    font-size: 65px;
+}
+.designbtn.style::after{
+    transform: scaleX(1);
+}
+
+/* //designbtn */
+
+
+
+
+/* ================================//skill=======================================*/
+
+/* ================================airplan=======================================*/
+
+/* title (자세하게 들려드리겠습니다.) */
+.airplantit{
+    position: absolute;
+    top: 0;left: 50%;
+    transform: translateX(-50%);
+}
+.airplantit h1 span{
+    color: #c2c2c2;
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+    float: left;
+}
+
+.airplantit h1 span.num2{
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+}
+
+/* airplanimg */
+.airplan-img{
+    position: absolute;
+    right: 20%;top: 3%;
+    width: 200px;height: 200px;
+    background:url(../img/이미지0.jpg)center; 
+    background-size: cover;
+    opacity: 0.5;
+    z-index: 1;
+    transform: rotate(0deg) scale(1);
+    transition: 0.3s;
+}
+.airplan-img:hover{
+    transform: rotate(10deg) scale(1.2);
+    opacity: 1;
+}
+.airplan-img p{
+    text-align: center;
+    line-height: 200px;
+    color: #fff;
+}
+
+/* airplan */
+
+.airplan{
+    position: relative;
+}
+.airplan-scroll{
+    position: relative;
+    top: -500px; left: -00px;
+}
+.airplane-scroll-timeline{
+    position: relative;
+    height: 5140px;/* //중요 */
+    margin: 200px 0;
+}
+
+
+
+.airplane{position: absolute;
+    left: 0; top: 0;
+    width: 200px;
+    offset-distance: 100%;
+    offset-rotate: auto 90deg;
+    transform: rotate(314deg);
+  offset-path:path("M263 3.5C135.5 157.5 -86.6 542.7 45 851.5C209.5 1237.5 1830.5 482 1756.5 1470.5C1707.95 2119.1 546 1700.5 301 2777C-27.3059 4219.54 1141.5 4359 1141.5 4359C1550.33 4414 2343.9 4646.9 2247.5 5138.5");
+}   
+.airplane.up{transform: rotate(128deg);}
+.airplane.down{transform: rotate(314deg);}
+.flight-path{
+    fill:none;
+    stroke: white;
+    stroke-width: 7px;
+    stroke-dasharray: 14px;
+}
+.track{
+    position: absolute;
+    left: 50vw;
+    transform: translateX(-50%);
+    top: 0;
+    width: 2261px;
+}
+.airplan-box1{
+    position: absolute;
+    top: 15%; left: 126px;
+}
+.airplan-box1 h1{
+    color: #fff;
+    font-size: 80px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+.airplan-box1 h2{
+    color: #fff;
+    font-size: 40px;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 5px;
+}
+
+.airplan.active .airplan-box1 .line1{
+    position: relative;
+    width: 910px;
+    height: 910px;
+    background-color: #fff;
+    transform-origin: left;
+    transform:translate(0, -450px) scale(0, 0.003);
+
+}
+
+
+.airplan-box2{
+    position: absolute;
+    top: 30%; right: 36%;
+}
+.airplan.active .airplan-box2 h1{
+    position: relative;
+    right: -52%;
+    color: #fff;
+    font-size: 35px;
+    font-weight: 300;
+    transform-origin:left;
+    font-family: 'Roboto', sans-serif;
+/*     animation: box2text 0.5s forwards;
+    transform: scaleX(0);
+    animation-delay: 2s; */
+}
+@keyframes box2text{
+    0%{transform: scaleX(0);}
+    100%{transform: scaleX(1);}
+}
+.box2circle{
+    position: absolute;
+    width: 700px;height: 700px;
+    border-radius: 50%;
+    background-color: #fff;
+    transform-origin: center center;
+}
+.airplan.active .box2circle.num1{
+    top: 260px; right: -300px;
+    background: url(../img/이미지3.jpg)-350px;
+    background-size: cover;
+    z-index: 1;
+/*     transform: scale(0); */
+/*     animation: box2circle 0.5s forwards;
+    animation-delay: 3s; */
+}
+.airplan.active .box2circle.num2{
+    opacity: 0.7;
+    width: 600px;height: 600px;
+    top: 150px; right: -400px;
+/*     transform: scale(0); */
+/*     animation: box2circle 0.5s forwards;
+    animation-delay: 3.5s; */
+}
+@keyframes box2circle{
+    0%{transform: scale(0);}
+    100%{transform: scale(1);}
+}
+
+.box3-num1{
+    position: absolute;
+    width: 500px;height: 500px;
+    top: 55%;right: 50%;
+    background:url(../img/이미지2.png)37% 0;
+    transform: scaleX(1);
+    transform-origin: left;
+    z-index: 1;
+}
+.box3-num2{
+    position: absolute;
+    width: 500px;height: 500px;
+    top: 52%;right: 45%;
+    background-color: #fff;
+    opacity: 0.7;
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.txtbox{
+    position: absolute;
+    top: 0;
+    color: #fff;
+}
+.txtbox h2,
+.txtbox p{
+    font-family: 'Roboto', sans-serif;
+}
+.txtbox h2{
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+.txtbox p{
+    font-size: 25px;
+    color: #A0A0A0;
+}
+/* box1 */
+.airplan-txt-box1{
+    width: 400px;height: 240px;
+    overflow: hidden;
+    top: 45%; left: 12%;
+    
+}
+
+
+/* box2 */
+.airplan-txt-box2{
+    width: 400px;height: 240px;
+    overflow: hidden;
+    text-align: right;
+    top: 65%; right: 20%;
+
+}
+
+
+/* box3 */
+.airplan-txt-box3{
+    width: 465px;height: 210px;
+    overflow: hidden;
+    top: 72%; left: 5%;
+}
+
+
+/* hobby */
+
+.hobbytit{
+    position: absolute;
+    top: 80%;
+    color: #fff;
+}
+.hobbytit span{
+    font-size: 150px;
+    font-family: 'Tektur', cursive; 
+    float: left;
+}
+
+.hobbyline{
+    position: absolute;
+    bottom: 16.5%;left: 0;
+    width: 500px;height: 2px;
+    background-color: #fff;
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+
+.hobbyimg .tiltEle{
+    position: relative;
+    perspective: 600px;
+    transform-style:preserve-3d;
+    background-color: #555;
+    width: 200px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hobbyimg .child{
+    transform: translateZ(70px);
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: white;
+}
+
+
+.hobbyimg .tilt_wrap1{
+    position: absolute;
+    bottom: 9%;left: 1%;
+    width: 1200px;
+    display: flex;
+    gap: 30px;
+
+}.hobbyimg .tilt_wrap2{
+    position: absolute;
+    bottom: 3%;right: 10%;
+    width: 1200px;
+    display: flex;
+    gap: 30px;
+}
+
+
+
+.hobbysubtit{
+    width: 367px;height: 44px;
+    overflow: hidden;
+    position: absolute;
+    bottom: 16%;left: 27%;
+}
+.hobbysubtit p{
+    color: #fff;
+}
+.hobbysubtit ul li a{
+    position: relative;
+    color: #fff;
+    font-size: 20px;
+    padding:  7px 10px;
+    margin-left: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.hobbysubtit ul li a:hover{
+    color: #222;
+    display: inline-block;
+    background-color: #fff;
+}
+
+
+
+
+
+
+
+/* title */
+.animal span,
+.character span{
+    font-size: 30px;
+    font-family: 'Tektur', cursive; 
+}
+
+.animal{
+    position: absolute;
+    bottom: 9%;right: 34%;
+    font-size: 30px;
+    color: #fff;
+}
+.animal span{
+    float: left;
+}
+
+.character{
+    position: absolute;
+    color: #fff;
+    bottom: 3%;left: 13%;
+}
+.character span{
+    float: left;
+}
+/* ================================//airplan=======================================*/
+/* ==================================textani=======================================*/
+.textscrollani{
+    height:100vh;
+    background: url(../img/txtaniimg.png);
+    background-size: cover;
+    overflow: hidden;
+    font-family: 'Tektur', cursive; 
+}
+
+.textscrollani .font{
+    font-family: 'Tektur', cursive; 
+    font-weight: 500;
+}
+
+.cover{
+    display: flex;
+    margin-bottom: 50px;
+    line-height: 193px;
+    font-size: 5rem;
+    background-color: #ffffff;
+    color: #000;
+    width: 105%; height: 20%;
+}
+
+/* .cover:nth-child(1){transform: rotate(-2deg);} */
+.cover:nth-child(2){justify-content: flex-end;}
+.cover:nth-child(4){justify-content: flex-end;}
+
+/* ================================//textani=======================================*/
+
+.next-website{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 50;
+}
+.nexttitle{
+    position: absolute;
+    width: 714px;
+    left: 50%;top: 50%;
+    transform: translate(-50%,-50%);
+}
+.nexttitle span{
+    font-size: 150px;
+    font-family: 'Tektur', cursive; 
+    float: left;
+}
+
+/* ==================================Wevsite=======================================*/
+#Website{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+.Website.active{
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.Website .table{
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 120px;
+    background-color: #696969;
+}
+
+.Website .table p{
+    position: absolute;
+    left: 50%;top: 50%;
+    transform: translate(-50% ,-50%);
+    color: #eeeeee;
+}
+
+
+
+
+
+
+/* 모니터 */
+.desktop{
+    position: absolute;
+    top: 100px; right: 38px;
+    width: 1228px;
+    height: 691px;
+    overflow: hidden;
+    z-index: 1;
+}
+.desktop .out{
+    position: absolute;
+    width: 1228px;
+    height: 691px;
+    background-color: #D9D9D9;
+    border-radius: 20px;
+    transform-origin: center;
+}
+.desktop .in{
+    position: absolute;
+    top: 20px; left: 20px;
+    width: 1188px;
+    height: 651px;
+    border-radius: 20px;
+    transform-origin: center;
+    
+}
+/* 모니터 메모 */
+    .memo{
+        position: absolute;
+        right: 5%;top: 6.5%;
+        
+    }
+    .memo li{
+        float: left;
+    }
+    .memo li a{
+        color: #fff;
+        padding: 5px 20px 30px;
+    }
+    .memo li a.desk,
+    .memo li a.tab,
+    .memo li a.mobile
+    {
+        position: relative;
+        top: 10px;
+        transition: 0.3s;
+    }
+    .memo li a.desk:hover,
+    .memo li a.tab:hover,
+    .memo li a.mobile:hover{
+        top: -10px;
+    }
+
+/* 컴퓨터 목,받침 부분 */
+.desktop-bottom{
+    width: 337px;height: 68px;
+    position: relative;
+    right: -61.5%;top: 5%;
+    transform: translateY(0);
+}
+.monitor-neck{
+    position: absolute;
+    width: 52px; height: 34px;
+    background-color: #D9D9D9;
+    top:0;right: 65.5%;
+}
+.monitor-bottom{
+    position: absolute;
+    width: 337px; height: 34px;
+    background-color: #D9D9D9;
+    bottom: 0;right: 25.5%;
+    border-radius: 20px 20px 0 0;
+
+}
+.nextcontactbtn{
+    position: absolute;
+    right: 4%;
+    bottom: 10px;
+}
+.table .contactbtn,
+.table i
+{
+    color: #d4d4d4;
+}
+
+
+
+/* 햄버거 메뉴 버튼 */
+.hamberguermenu{
+    position: relative;
+    top: 150px;left: 332px;
+    width: 60px;
+    height: 60px;
+    background-color: #d9d9d934;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    z-index: 1;
+    transition: 0.3s;
+}
+.hamberguermenu:hover{
+    background-color: #d9d9d962;
+}
+.hamberguermenu .line{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 31px;
+    height: 3px;
+    background-color: #fff;
+}
+.hamberguermenu .top{
+    top: 30%; left: 15px;
+    transform-origin: top left;
+    transform:rotate(0);
+    transition: 0.5s;
+}
+.hamberguermenu .middle{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,0);
+}
+.hamberguermenu .bottom{
+    position: absolute;
+    bottom: 25%;left: 30px;
+    transform-origin: bottom left;
+    transition: 0.5s;
+}
+.hamberguermenu.active .top{
+    top: 30%; left: 20px;
+    transform:rotate(50deg);
+}
+.hamberguermenu.active .middle{
+    opacity: 0;
+}
+.hamberguermenu.active .bottom{
+    bottom: 25.2%;left: 20px;
+    transform:rotate(-50deg);
+}
+/* 메뉴 */
+.sitebtn{
+    position: relative;
+    transform: translateX(-17.3%);
+    transition: 0.5s;
+}
+.sitebtn.on{
+    transform: translateX(0);
+}
+.sitemenu{
+    position: relative;
+    top: 90px;
+    width: 332px;
+    height: 682px;
+    background-color: #d9d9d934;
+}
+
+.sitemenu::before{
+    content: "";
+    position: absolute;
+    top: 47%;
+    width: 300px; height: 1px;
+    background-color: #fff;
+}
+.sitemenu p{
+    font-family: 'Tektur', cursive; 
+    line-height: 50px;
+    transition: 0.3s;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+.sitemenu h3{
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #aaa;
+}
+.sitemenu .num1{
+    position: absolute;
+    top: 65px;left: 10px;
+}
+.sitemenu .num1 p{
+    color: #a8cadd;
+    font-size: 25px;
+}
+.sitemenu .num1 p:hover{
+    color: #fff;
+    font-size: 30px;
+}
+.sitemenu .num2{
+    position: absolute;
+    top: 365px;left: 10px;
+}
+
+.sitemenu .num2 p{
+    color: #dddab9;
+    font-size: 25px;
+}
+.sitemenu .num2 p:hover{
+    color: #fff;
+    font-size: 30px;
+}
+
+
+/* responsivesite */
+/* 화면 */
+.responsivesite{
+    display: none;
+}
+.responsivesite.show{
+    display: block;
+}
+.responsivesite .label{
+    position: absolute;
+    left: 20px;top: 0;
+}
+.responsivesite .desktop .in.desk{
+    background: url(../webimg/responsivedesktop.png);
+    background-size: cover;
+    background-position: top;
+    transition: background 0.8s;
+}
+
+.responsivesite .desktop .in.desk:hover{
+    background-position: bottom;
+}
+
+.responsivesite .desktop .in.teb{
+    background: url(../webimg/responsivetablet.png);
+    background-size: cover;
+    background-position: top;
+    transition: background 0.8s;
+}
+
+.responsivesite .desktop .in.teb:hover{
+    background-position: bottom;
+}
+
+.responsivesite .desktop .in.phone{
+    background: url(../webimg/responsivemobile.png);
+    background-size: cover;
+    background-position: top;
+    transition: background 1.5s;
+}
+
+.responsivesite .desktop .in.phone:hover{
+    background-position: bottom;
+}
+.responsivesite .memo li a{
+    background-color: rgb(102, 171, 196);
+}
+
+
+/* mebabox */
+.megaboxsite{
+    display: none;
+}
+.megaboxsite.show{
+    display: block;
+}
+.megaboxsite .label{
+    position: absolute;
+    left: 20px;top: 0;
+}
+.megaboxsite .desktop .in.desk{
+    background: url(../webimg/megaboxdesktop.png);
+    background-size: cover;
+    background-position: top;
+    transition: background 0.8s;
+}
+
+.megaboxsite .desktop .in.desk:hover{
+    background-position: bottom;
+}
+
+.megaboxsite .desktop .in.teb{
+    background: url(../webimg/megaboxtablet.png);
+    background-size: cover;
+    background-position: top;
+    transition: background 0.8s;
+}
+
+.megaboxsite .desktop .in.teb:hover{
+    background-position: bottom;
+}
+
+.megaboxsite .desktop .in.phone{
+    background: url(../webimg/megaboxmobile.png);
+    background-size: cover;
+    background-position: top;
+    transition: background 1.5s;
+}
+
+.megaboxsite .desktop .in.phone:hover{
+    background-position: bottom;
+}
+
+.megaboxsite .memo li a{
+    background-color: #39106a;
+}
+
+
+/* musign -----------------------------------*/
+.musignsite{
+    display: none;
+}
+.musignsite.show{
+    display: block;
+}
+.musignsite .label{
+    position: absolute;
+    left: 20px;top: 0;
+}
+.musignsite .desktop .in.desk{
+    background: url(../webimg/musigndesktop.png);
+    background-size: cover;
+    background-position: top;
+    transition: background 0.8s;
+}
+
+.musignsite .desktop .in.desk:hover{
+    background-position: bottom;
+}
+
+.musignsite .desktop .in.teb{
+    background: url(../webimg/musigntablet.png);
+    background-size: cover;
+    background-position: top;
+    transition: background 0.8s;
+}
+
+.musignsite .desktop .in.teb:hover{
+    background-position: bottom;
+}
+
+.musignsite .desktop .in.phone{
+    background: url(../webimg/musignmobile.png);
+    background-size: cover;
+    background-position: top;
+    transition: background 1.5s;
+}
+
+.musignsite .desktop .in.phone:hover{
+    background-position: bottom;
+}
+
+.musignsite.show .memo li a{
+    animation: musignmemo 2s forwards;
+}
+@keyframes musignmemo{
+    0%{background-color: #f5f5f5;color: #222;}
+    100%{background-color: #e8fcff;color: #222;  }
+}
+
+
+/* shshi -----------------------------------*/
+.shshisite{
+    display: none;
+}
+.shshisite.show{
+    display: block;
+}
+.shshisite .label{
+    position: absolute;
+    left: 20px;top: 0;
+}
+.shshisite .desktop .in.desk{
+    background: url(../webimg/shshidesktop.png);
+    background-size: cover;
+    background-position: top;
+    transition: background 0.8s;
+}
+
+.shshisite .desktop .in.desk:hover{
+    background-position: bottom;
+}
+
+.shshisite .desktop .in.teb{
+    background: url(../webimg/shshitablet.png);
+    background-size: cover;
+    background-position: top;
+    transition: background 0.8s;
+}
+
+.shshisite .desktop .in.teb:hover{
+    background-position: bottom;
+}
+
+.shshisite .desktop .in.phone{
+    background: url(../webimg/shshimobile.png);
+    background-size: cover;
+    background-position: top;
+    transition: background 1.5s;
+}
+
+.shshisite .desktop .in.phone:hover{
+    background-position: bottom;
+}
+.shshisite .memo li a{
+    background-color: #FFF1EB;
+    color: #222;
+}
+
+/* 반응형 x */
+/* cider */
+.cidersite{
+    display: none;
+}
+.cidersite.show{
+    display: block;
+}
+.cidersite .desktop .in{
+    background: url(../webimg/cider.png);
+    background-size: cover;
+    background-position: top;
+    transition: background 0.8s;
+}
+
+.cidersite .desktop .in:hover{
+    background-position: bottom;
+}
+.cidersite .memo li a{
+    background-color: rgb(8, 165, 34);
+}
+
+
+/* hanacard */
+.hanacardsite{
+    display: none;
+}
+.hanacardsite.show{
+    display: block;
+}
+.hanacardsite .desktop .in{
+    background: url(../webimg/Hanacard.png);
+    background-size: cover;
+    background-position: top;
+    transition: background 0.8s;
+}
+
+.hanacardsite .desktop .in:hover{
+    background-position: bottom;
+}
+.hanacardsite .memo li a{
+    background-color: #A0D1EE;
+    color: #222;
+}
+/* naver */
+.naversite{
+    display: none;
+}
+.naversite.show{
+    display: block;
+}
+.naversite .desktop .in{
+    background: url(../webimg/naver.png);
+    background-size: cover;
+    background-position: top;
+    transition: background 0.8s;
+}
+
+.naversite .desktop .in:hover{
+    background-position: bottom;
+}
+.naversite .memo li a{
+    background-color: #2DB400;
+}
+
+/* webstandard */
+.applesite{
+    display: none;
+}
+.applesite.show{
+    display: block;
+}
+.applesite .desktop .in{
+    background: url(../webimg/apple.png);
+    background-size: cover;
+    background-position: top;
+    transition: background 3s;
+}
+
+.applesite .desktop .in:hover{
+    background-position: bottom;
+}
+.applesite .memo li a{
+    background-color: #4B4B4B;
+}
+
+
+/* lockandlock */
+.hmsite{
+    display: none;
+}
+.hmsite.show{
+    display: block;
+}
+.hmsite .desktop .in{
+    background: url(../webimg/hm.png);
+    background-size: cover;
+    background-position: top;
+    transition: background 0.8s;
+}
+
+.hmsite .desktop .in:hover{
+    background-position: bottom;
+}
+.hmsite .memo li a{
+    background-color: #CD0118;
+}
+/* WebSite */
+.website2 .desktop-bottom{
+    width: 337px;
+    height: 68px;
+    position: relative;
+    right: -61.5%;
+    top: 5%;
+    transform: translateY(0);
+}
+.website2 .monitor-neck{
+    top: 1px;
+}
+.Website h1{
+    position: absolute;
+    color: #fff;
+    left: 10%;top: 1.5%;
+    font-size: 100px;
+}
+
+
+/* scrolldown */
+.scroll .container {
+    position: absolute;
+    left: 30%;top: 45%;
+    width: 24px;
+    height: 24px;
+  }
+  
+  .chevron {
+    position: absolute;
+    width: 28px;
+    height: 8px;
+    opacity: 0;
+    transform: scale3d(0.5, 0.5, 0.5);
+    animation: move 3s ease-out infinite;
+  }
+  
+  .chevron:first-child {
+    animation: move 3s ease-out 1s infinite;
+  }
+  
+  .chevron:nth-child(2) {
+    animation: move 3s ease-out 2s infinite;
+  }
+  
+  .chevron:before,
+  .chevron:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 51%;
+    background: #fff;
+  }
+  
+  .chevron:before {
+    left: 0;
+    transform: skew(0deg, 30deg);
+  }
+  
+  .chevron:after {
+    right: 0;
+    width: 50%;
+    transform: skew(0deg, -30deg);
+  }
+  
+  @keyframes move {
+    25% {
+      opacity: 1;
+  
+    }
+    33% {
+      opacity: 1;
+      transform: translateY(30px);
+    }
+    67% {
+      opacity: 1;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+    }
+  }
+  
+ .scroll .text {
+    display: block;
+    margin-top: 75px;
+    margin-left: -30px;
+    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: .25;
+    animation: pulse 2s linear alternate infinite;
+  }
+  
+  @keyframes pulse {
+    to {
+      opacity: 1;
+    }
+  }
+
+.explanation{
+  color: #fff;
+  position: absolute;
+  bottom: 3%;left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+/* ================================//Wevsite=======================================*/
+
+
+/* ================================Contact=======================================*/
+.contact{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+/*     background-color: #000; */
+}
+.contact.active{
+    position: fixed;
+}
+
+.contwrap{
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    bottom: 0;
+/*     background-color: #fff; */
+}
+/* Thank you for Watching */
+.contwrap .thankyou h1{
+    position: absolute;
+    top: 130px;left: 20px;
+    color: #fff;
+    font-family: 'Tektur', cursive; 
+}
+.contwrap .thankyou h1 span.Y{
+    float: left;
+    font-family: 'Tektur', cursive; 
+    font-size: 61px;
+    font-weight: 500;
+    transform-origin: left;
+    transform: rotateY(90deg);
+}
+.contwrap .thankyou h1 span.X{
+    float: left;
+    font-family: 'Tektur', cursive; 
+    font-size: 61px;
+    font-weight: 500;
+    transform-origin: top;
+    transform: rotateX(90deg);
+}
+.contwrap .thankyou h1 span.left{
+    padding-left: 20px;
+}
+
+/* 포트폴리오를 봐주셔서 감사합니다 */
+.contwrap .thankyou2{
+    top: 50%;left: 15%;
+    position: absolute;
+}
+.contwrap .thankyou2 ul li{
+    font-size: 20px;
+    text-align: right;
+}
+.contwrap .thankyou2 ul li p.num1,
+.contwrap .thankyou2 ul li p.num2{
+    color: #fff;
+}
+/* 중간라인 텍스트*/
+.more{
+    width: 360px;
+    height: 32px;
+    overflow: hidden;
+    background-color: #fff;
+    font-size: 23px;
+    font-weight: 700;
+    text-align: center;
+}
+.more p{
+    padding:10px 0;
+    position: relative;
+    top: 0px;
+    color: #000;
+    animation: more 4s forwards infinite;
+} 
+@keyframes more {
+    0%{top:100px}
+    25%{top:-10px}
+    50%{top:-60px}
+    75%{top:-110px}
+    100%{top:-150px}
+}
+
+/* 가운데 이미지 */
+.contactimg{
+    position: relative;
+    left: 50%;top: 20%;
+    transform: translate(-15%,-50%);
+}
+
+.contactimg .out{
+    position: absolute;
+    width: 600px;
+}
+.contactimg .in{
+    position: absolute;
+    top: 7px;left: -5px;
+    width: 600px;
+}
+
+/* contact me --------------------*/
+.contactme{
+    position: absolute;
+    bottom: 3%;left: 34%;
+}
+.contactme span{
+    font-family: 'Tektur', cursive;
+    font-size: 110px;
+    float: left;
+    color: #fff;
+    transform-origin: bottom;
+    transform: rotateX(90deg);
+}
+.contactme span.left{
+    padding-left: 30px;
+}
+
+/* 라인 */
+.contactline1{
+    position: absolute;
+    top: 157.3px;left: 23.1%;
+    transform-origin: left;
+    transform:scaleX(1);
+    width: 1200px;
+    height: 6px;
+    background-color: #fff;
+}
+.contactline2{
+    position: absolute;
+    top: 24.8%;left: 1.4%;
+    transform-origin: top;
+    transform:scaleY(1);
+    width: 13px;
+    height: 700px;
+    background-color: #fff;
+}
+
+/* 연락처 */
+.information{
+    position: absolute;
+    right: 16%; top: 35%;
+    width: 320px;
+    height: 445px;
+    overflow: hidden;
+}
+.information ul li{
+    position: relative;
+    line-height: 50px;
+    text-align: center;
+}
+.information ul li p{
+    text-align: left;
+    font-size: 20px;
+    color: #fff;
+}
+.information ul li img{
+    width: 300px;
+}
+
+
+/* 시간과 날짜------------------------ */
+
+.clock{
+    font-family: 'Neucha', cursive;
+    position: absolute;
+    right: 4% ;top: 6%;
+    width: 310px;height: 300px;
+    padding-top: 75px;
+    text-align: right;
+}
+.clock span{
+    color: #fff;
+    /* font-weight: bold; */
+    /* opacity: 0.7; */
+}
+    .clock .time_box .txt_lg{
+        font-size: 35px;
+    }
+
+    .clock .date_box{
+        font-size: 15px;
+    }
+#day{
+    display: block;
+    margin-top: 5px;
+}
+.mark{
+    display: inline-block;
+    vertical-align: 2px;
+    font-size: 20px;
+}
+
+/* 오른쪽 스크롤 텍스트 */
+.scrolltxt{
+    position: absolute;
+    left: 50%;top: 50%;
+    transform: translate(-50%,-50%);
+}
+.scrolltxt h3{
+    font-size: 250px;
+    color: #fff;
+}
+.scrolltxt h3 span{
+    float: left;
+    font-size: 250px;
+    color: #fff;
+}
+.up{
+    position: fixed;
+    right: 5%;
+    bottom: 5%;
+    z-index: 100;
+}
+.up a{
+    font-size: 30px;
+    color: #fff;
+}
+/* ================================//Contact=======================================*/
